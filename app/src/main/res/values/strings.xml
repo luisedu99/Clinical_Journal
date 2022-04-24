@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Clinical Journal</string>
+
+    <!-- Vista de login -->
+    <string name="button_entrar">Entrar</string>
+    <string name="button_registrarse">Registrarse</string>
+
+    <!-- Vista de registrarse -->
+    <string name="edittext_registerview_nombres">Nombres</string>
+    <string name="edittext_registerview_apellidos">Apellidos</string>
+    <string name="edittext_registerview_email">Email</string>
+    <string name="edittext_registerview_password">Contraseña</string>
+    <string name="edittext_registerview_telefono">Telefono</string>
+    <string name="edittext_registerview_padecimientos">Padecimientos</string>
+    <string name="button_registrarme">Registrarme</string>
+
+    <!-- Vista de menu pacientes -->
+    <string name="textview_bienvenidoPac">Bienvenido Paciente</string>
+    <string name="textview_opcion1menupacientes">Crear cita con especialista</string>
+    <string name="textview_opcion2menupacientes">Ver citas</string>
+    <string name="textview_opcion3menupacientes">Ver informacion de los especialistas</string>
+
+    <!-- Vista de menu doctores -->
+    <string name="textview_bienvenidoDoc">Bienvenido Doctor</string>
+    <string name="textview_opcion1menudoctores">Crear citas</string>
+    <string name="textview_opcion2menudoctores">Ver citas</string>
+    <string name="textview_opcion3menudoctores">Ver informacion de pacientes</string>
+
+
 </resources>
