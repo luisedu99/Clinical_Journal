@@ -10,9 +10,9 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "clinic.db";
-    public static final String TABLE_DOCTORS = "t_doctores";
-    public static final String TABLE_PATIENTS = "t_pacientes";
-    public static final String TABLE_APPOINTMENT = "t_citas";
+    public static final String TABLE_DOCTORS = "t_doctors";
+    public static final String TABLE_PATIENTS = "t_patients";
+    public static final String TABLE_APPOINTMENT = "t_appointments";
 
     public DbHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -22,33 +22,33 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL("CREATE TABLE " + TABLE_DOCTORS + "(" +
-                "id_doctor INTEGER PRIMARY KEY," +
-                "nombre_doctor TEXT NOT NULL," +
-                "apellido_doctor TEXT NOT NULL," +
-                "email_doctor TEXT NOT NULL," +
-                "contra_doctor TEXT NOT NULL," +
-                "telefono_doctor TEXT NOT NULL," +
-                "descripcion_doctor TEXT NOT NULL," +
-                "rol_doctor INTEGER NOT NULL)");
+                "id_doctor INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "doctor_name TEXT NOT NULL," +
+                "doctor_lastname TEXT NOT NULL," +
+                "doctor_email TEXT NOT NULL," +
+                "doctor_pass TEXT NOT NULL," +
+                "doctor_phone TEXT NOT NULL," +
+                "doctor_description TEXT NOT NULL," +
+                "doctor_role INTEGER NOT NULL)");
 
         db.execSQL("CREATE TABLE " + TABLE_PATIENTS + "(" +
-                "id_paciente INTEGER PRIMARY KEY," +
-                "nombre_paciente TEXT NOT NULL," +
-                "apellido_paciente TEXT NOT NULL," +
-                "email_paciente TEXT NOT NULL," +
-                "contra_paciente TEXT NOT NULL," +
-                "telefono_paciente TEXT NOT NULL," +
-                "descripcion_paciente TEXT NOT NULL," +
-                "rol_paciente INTEGER NOT NULL)");
+                "id_patient INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "patient_name TEXT NOT NULL," +
+                "patient_lastname TEXT NOT NULL," +
+                "patient_email TEXT NOT NULL," +
+                "patient_pass TEXT NOT NULL," +
+                "patient_phone TEXT NOT NULL," +
+                "patient_description TEXT NOT NULL," +
+                "patient_role INTEGER NOT NULL)");
 
         db.execSQL("CREATE TABLE " + TABLE_APPOINTMENT + "(" +
-                "id_cita INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "id_pacienteFK INTEGER NOT NULL," +
+                "id_appointment INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "id_patientFK INTEGER NOT NULL," +
                 "id_doctorFK INTEGER NOT NULL," +
-                "consultorio TEXT NOT NULL," +
-                "hora_cita TEXT NOT NULL," +
-                "FOREIGN KEY(id_pacienteFK) REFERENCES t_pacientes(id_paciente)," +
-                "FOREIGN KEY(id_doctorFK) REFERENCES t_doctores(id_doctor))");
+                "clinic TEXT NOT NULL," +
+                "appointment_date TEXT NOT NULL," +
+                "FOREIGN KEY(id_patientFK) REFERENCES t_patients(id_patient)," +
+                "FOREIGN KEY(id_doctorFK) REFERENCES t_doctors(id_doctor))");
 
     }
 

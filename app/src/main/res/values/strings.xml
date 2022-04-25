@@ -11,7 +11,7 @@
     <string name="edittext_registerview_email">Email</string>
     <string name="edittext_registerview_password">Contraseña</string>
     <string name="edittext_registerview_telefono">Telefono</string>
-    <string name="edittext_registerview_padecimientos">Padecimientos</string>
+    <string name="edittext_registerview_infoAdicional">Informacion adicional</string>
     <string name="button_registrarme">Registrarme</string>
 
     <!-- Vista de menu pacientes -->

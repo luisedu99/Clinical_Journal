@@ -1,4 +1,4 @@
 package sv.edu.udb.clinicaljournal;
 
-public class DbUsers {
+public class patientsController {
 }
