@@ -9,6 +9,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DbPatients extends DbHelper{
 
@@ -108,8 +109,22 @@ public class DbPatients extends DbHelper{
         }
         return null;
     }
+
     public int getIdRol(){
         int rol= getIdRol();
         return rol;
+    }
+
+    public List<Patients> showPatients(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM t_patients", null);
+        List<Patients> patients = new ArrayList<>();
+
+        if(cursor.moveToFirst()){
+            do{
+                patients.add(new Patients(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6), cursor.getInt(7)));
+            }while(cursor.moveToNext());
+        }
+        return patients;
     }
 }

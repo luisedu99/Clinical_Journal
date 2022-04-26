@@ -41,52 +41,60 @@ public class RegisterScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //Registrar un paciente
-                if(rdbtnPatientRegister.isChecked() == true){
+                //Validar campos vacios
+                if(txtPatientName.getText().toString().length() == 0 || txtPatientLastname.getText().toString().length() == 0 || txtPatientEmail.getText().toString().length() == 0 ||
+                        txtPatientPassword.getText().toString().length() == 0 || txtPatientPhone.getText().toString().length() == 0 || txtPatientDescription.getText().toString().length() == 0){
 
-                    DbPatients dbPatients = new DbPatients(RegisterScreen.this);
-                    long id = dbPatients.insertPatients(txtPatientName.getText().toString(), txtPatientLastname.getText().toString(), txtPatientEmail.getText().toString(),
-                            txtPatientPassword.getText().toString(), txtPatientPhone.getText().toString(), txtPatientDescription.getText().toString(), 0);
+                    Log.d("Mensaje: ", "ERROR: Debe de rellenar todos los campos");
+                    Toast.makeText(RegisterScreen.this, "ERROR: Debe de rellenar todos los campos", Toast.LENGTH_LONG).show();
+                }else{
+                    //Registrar un paciente
+                    if(rdbtnPatientRegister.isChecked() == true){
 
-                    if(id > 0){
-                        Log.d("Mensaje: ", "PACIENTE creado con exito");
-                        txtPatientName.setText("");
-                        txtPatientLastname.setText("");
-                        txtPatientEmail.setText("");
-                        txtPatientPassword.setText("");
-                        txtPatientPhone.setText("");
-                        txtPatientDescription.setText("");
-                        Toast.makeText(RegisterScreen.this, "PACIENTE CREADO CON EXITO", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(),LoginScreen.class);
-                        startActivity(intent);
-                    }else{
-                        Log.d("Mensaje: ", "ERROR al crear paciente");
-                        Toast.makeText(RegisterScreen.this, "ERROR AL CREAR PACIENTE ", Toast.LENGTH_LONG).show();
+                        DbPatients dbPatients = new DbPatients(RegisterScreen.this);
+                        long id = dbPatients.insertPatients(txtPatientName.getText().toString(), txtPatientLastname.getText().toString(), txtPatientEmail.getText().toString(),
+                                txtPatientPassword.getText().toString(), txtPatientPhone.getText().toString(), txtPatientDescription.getText().toString(), 0);
+
+                        if(id > 0){
+                            Log.d("Mensaje: ", "PACIENTE creado con exito");
+                            txtPatientName.setText("");
+                            txtPatientLastname.setText("");
+                            txtPatientEmail.setText("");
+                            txtPatientPassword.setText("");
+                            txtPatientPhone.setText("");
+                            txtPatientDescription.setText("");
+                            Toast.makeText(RegisterScreen.this, "PACIENTE CREADO CON EXITO", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(getApplicationContext(),LoginScreen.class);
+                            startActivity(intent);
+                        }else{
+                            Log.d("Mensaje: ", "ERROR al crear paciente");
+                            Toast.makeText(RegisterScreen.this, "ERROR AL CREAR PACIENTE ", Toast.LENGTH_LONG).show();
+                        }
+
                     }
+                    //Registrar un doctor
+                    else if(rdbtnDoctorRegister.isChecked() == true){
 
-                }
-                //Registrar un doctor
-                else if(rdbtnDoctorRegister.isChecked() == true){
+                        DbDoctors dbDoctors =new DbDoctors(RegisterScreen.this);
+                        long id = dbDoctors.insertDoctors(txtPatientName.getText().toString(), txtPatientLastname.getText().toString(), txtPatientEmail.getText().toString(),
+                                txtPatientPassword.getText().toString(), txtPatientPhone.getText().toString(), txtPatientDescription.getText().toString(), 1);
 
-                    DbDoctors dbDoctors =new DbDoctors(RegisterScreen.this);
-                    long id = dbDoctors.insertDoctors(txtPatientName.getText().toString(), txtPatientLastname.getText().toString(), txtPatientEmail.getText().toString(),
-                            txtPatientPassword.getText().toString(), txtPatientPhone.getText().toString(), txtPatientDescription.getText().toString(), 1);
+                        if(id > 0){
+                            Log.d("Mensaje: ", "DOCTOR creado con exito");
+                            Toast.makeText(RegisterScreen.this, "DOCTOR CREADO CON EXITO", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(getApplicationContext(),LoginScreen.class);
+                            startActivity(intent);
+                        }else{
+                            Log.d("Mensaje: ", "ERROR al crear doctor");
+                            Toast.makeText(RegisterScreen.this, "ERROR AL CREAR DOCTOR ", Toast.LENGTH_LONG).show();
+                        }
 
-                    if(id > 0){
-                        Log.d("Mensaje: ", "DOCTOR creado con exito");
-                        Toast.makeText(RegisterScreen.this, "DOCTOR CREADO CON EXITO", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(),LoginScreen.class);
-                        startActivity(intent);
-                    }else{
-                        Log.d("Mensaje: ", "ERROR al crear doctor");
-                        Toast.makeText(RegisterScreen.this, "ERROR AL CREAR DOCTOR ", Toast.LENGTH_LONG).show();
                     }
-
-                }
-                //No ha seleccionado un role en el radiobutton
-                else {
-                    Log.d("Mensaje: ", "ERROR debe seleccionar un rol");
-                    Toast.makeText(RegisterScreen.this, "ERROR DEBE SELECCIONAR UN ROL", Toast.LENGTH_LONG).show();
+                    //No ha seleccionado un role en el radiobutton
+                    else {
+                        Log.d("Mensaje: ", "ERROR debe seleccionar un rol");
+                        Toast.makeText(RegisterScreen.this, "ERROR DEBE SELECCIONAR UN ROL", Toast.LENGTH_LONG).show();
+                    }
                 }
 
             }

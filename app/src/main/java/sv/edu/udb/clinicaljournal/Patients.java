@@ -14,7 +14,8 @@ public class Patients {
     public Patients() {
     }
 
-    public Patients(String patient_name, String patient_lastname, String patient_email, String patient_pass, String patient_phone, String patient_descrip, int patient_role) {
+    public Patients(int id_pacient, String patient_name, String patient_lastname, String patient_email, String patient_pass, String patient_phone, String patient_descrip, int patient_role) {
+        this.id_pacient = id_pacient;
         this.patient_name = patient_name;
         this.patient_lastname = patient_lastname;
         this.patient_email = patient_email;

@@ -40,7 +40,10 @@
     <string name="boton_guardarCita">Crear Cita</string>
 
     <!-- Vista de ver listado de doctores del usuario Paciente -->
-    <string name="textview_titleShowDoctors">Ver Doctores.</string>
+    <string name="textview_titleShowDoctors">Ver listado de Doctores</string>
+
+    <!-- Vista de ver listado de pacientes del usuario Doctor -->
+    <string name="textview_titleShowPatients">Ver listado de Pacientes</string>
 
 
 </resources>
