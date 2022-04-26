@@ -3,6 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_createdatedoctor_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_creatordatepatient_screen.xml" value="0.22" />
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_doctor_menu_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_listpatientes.xml" value="0.209375" />
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_login_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_patient_menu_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_showdatedoctor_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_showdatepatient_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_showdoctors_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/consultorioAndroid/Clinical_Journal/app/src/main/res/layout/activity_showpatients_screen.xml" value="0.209375" />
         <entry key="..\:/Users/luchi/Documents/2022/Ciclo 1/DSM/TEO/Proyecto de catedra/app/src/main/res/layout/activity_doctor_menu_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/luchi/Documents/2022/Ciclo 1/DSM/TEO/Proyecto de catedra/app/src/main/res/layout/activity_login_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/luchi/Documents/2022/Ciclo 1/DSM/TEO/Proyecto de catedra/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />

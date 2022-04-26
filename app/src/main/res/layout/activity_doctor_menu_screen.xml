@@ -16,7 +16,8 @@
         android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_agendar" />
+        app:srcCompat="@drawable/ic_agendar"
+        android:onClick="createDateDoctor"/>
 
     <TextView
         android:id="@+id/textView4"
@@ -38,7 +39,8 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_vercitas" />
+        app:srcCompat="@drawable/ic_vercitas"
+        android:onClick="createDateDoctor"/>
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -50,7 +52,8 @@
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_verinfo2" />
+        app:srcCompat="@drawable/ic_verinfo2"
+        android:onClick="showPatients"/>
 
     <TextView
         android:id="@+id/textView2"

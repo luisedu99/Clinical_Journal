@@ -2,6 +2,7 @@ package sv.edu.udb.clinicaljournal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -49,7 +50,15 @@ public class RegisterScreen extends AppCompatActivity {
 
                     if(id > 0){
                         Log.d("Mensaje: ", "PACIENTE creado con exito");
+                        txtPatientName.setText("");
+                        txtPatientLastname.setText("");
+                        txtPatientEmail.setText("");
+                        txtPatientPassword.setText("");
+                        txtPatientPhone.setText("");
+                        txtPatientDescription.setText("");
                         Toast.makeText(RegisterScreen.this, "PACIENTE CREADO CON EXITO", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(getApplicationContext(),LoginScreen.class);
+                        startActivity(intent);
                     }else{
                         Log.d("Mensaje: ", "ERROR al crear paciente");
                         Toast.makeText(RegisterScreen.this, "ERROR AL CREAR PACIENTE ", Toast.LENGTH_LONG).show();
@@ -66,6 +75,8 @@ public class RegisterScreen extends AppCompatActivity {
                     if(id > 0){
                         Log.d("Mensaje: ", "DOCTOR creado con exito");
                         Toast.makeText(RegisterScreen.this, "DOCTOR CREADO CON EXITO", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(getApplicationContext(),LoginScreen.class);
+                        startActivity(intent);
                     }else{
                         Log.d("Mensaje: ", "ERROR al crear doctor");
                         Toast.makeText(RegisterScreen.this, "ERROR AL CREAR DOCTOR ", Toast.LENGTH_LONG).show();
@@ -81,4 +92,5 @@ public class RegisterScreen extends AppCompatActivity {
             }
         });
     }
+
 }
