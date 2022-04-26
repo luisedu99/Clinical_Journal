@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClinicalJournal">
         <activity
+            android:name=".DoctorsListScreen"
+            android:exported="false" />
+        <activity
+            android:name=".PatientsListScreen"
+            android:exported="false" />
+        <activity
             android:name=".PatientMenuScreen"
             android:exported="false" />
         <activity
