@@ -64,7 +64,8 @@ public class LoginScreen extends AppCompatActivity {
                     //Entrar como paciente
                     if(rdbtnPatientLogin.isChecked() == true){
                         DbPatients dbPatients = new DbPatients(LoginScreen.this);
-
+                        user.setText("");
+                        pass.setText("");
                         Log.d("LoginScreen: ", userEmail);
                         Log.d("LoginScreen: ", userPass);
 
@@ -90,6 +91,8 @@ public class LoginScreen extends AppCompatActivity {
                             Toast.makeText(LoginScreen.this, "Datos correctos", Toast.LENGTH_LONG).show();
                             Intent intent2 =new Intent(LoginScreen.this, DoctorMenuScreen.class);
                             intent2.putExtra("id_doctor", doc.getId_doctor());
+                            user.setText("");
+                            pass.setText("");
                             startActivity(intent2);
                         }else{
                             Toast.makeText(LoginScreen.this, "ERROR AL INGRESAR COMO DOCTOR", Toast.LENGTH_LONG).show();

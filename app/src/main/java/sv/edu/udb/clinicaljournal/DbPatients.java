@@ -108,4 +108,8 @@ public class DbPatients extends DbHelper{
         }
         return null;
     }
+    public int getIdRol(){
+        int rol= getIdRol();
+        return rol;
+    }
 }

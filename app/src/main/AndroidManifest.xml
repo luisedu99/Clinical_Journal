@@ -10,10 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClinicalJournal">
         <activity
-            android:name=".DoctorsListScreen"
+            android:name=".activity_listpatientes_activity"
             android:exported="false" />
         <activity
-            android:name=".PatientsListScreen"
+            android:name=".ShowDatePatient"
+            android:exported="false" />
+        <activity
+            android:name=".CreateDatePatiente"
+            android:exported="false" />
+        <activity
+            android:name=".showDateDoctor"
+            android:exported="false" />
+        <activity
+            android:name=".CreateDateDoctor"
+            android:exported="false" />
+        <activity
+            android:name=".ShowPatients"
+            android:exported="false" />
+        <activity
+            android:name=".ShowDoctor"
             android:exported="false" />
         <activity
             android:name=".PatientMenuScreen"

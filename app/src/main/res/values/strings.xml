@@ -26,5 +26,18 @@
     <string name="textview_opcion2menudoctores">Ver citas</string>
     <string name="textview_opcion3menudoctores">Ver informacion de pacientes</string>
 
+    <!--Vista de Crear Citas rol Doctor-->
+    <string name="textview_telefonoPaciente">Ingrese numero de telefono</string>
+    <string name="textview_nombrePaciente">Nombre del paciente</string>
+
+    <!-- Vista de Crear Citas rol Paciente-->
+    <string name="textview_crearcita">Crear Cita</string>
+    <string name="textview_especialidad">Seleccione la especialidad</string>
+    <string name="textview_doctor">Seleccione el doctor</string>
+    <string name="textview_fecha">ingrese la fecha de su cita</string>
+    <string name="textview_hora">Elija una hora</string>
+    <string name="textview_detalle">Ingrese detalles(si presenta sintomas)</string>
+    <string name="boton_guardarCita">Crear Cita</string>
+
 
 </resources>

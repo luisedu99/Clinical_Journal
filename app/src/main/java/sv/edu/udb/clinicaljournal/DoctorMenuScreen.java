@@ -2,7 +2,9 @@ package sv.edu.udb.clinicaljournal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -26,5 +28,17 @@ public class DoctorMenuScreen extends AppCompatActivity {
         dbDoctors = new DbDoctors(this);
         docs = dbDoctors.getDoctorId(id_doc);
         txtDocName.setText(docs.getDoctor_name() + " " + docs.getDoctor_lastname());
+    }
+    public void showPatients(View v){
+        Intent intent=new Intent(this, ShowPatients.class);
+        startActivity(intent);
+    }
+    public void createDateDoctor(View v){
+        Intent intent = new Intent(this, CreateDateDoctor.class);
+        startActivity(intent);
+    }
+    public void showDatesDoctor(View v){
+        Intent intent = new Intent(this, showDateDoctor.class);
+        startActivity(intent);
     }
 }

@@ -16,7 +16,8 @@
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_agendar" />
+        app:srcCompat="@drawable/ic_agendar"
+        android:onClick="createDatePatient"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -38,7 +39,8 @@
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_vercitas" />
+        app:srcCompat="@drawable/ic_vercitas"
+        android:onClick="showDatePatient"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -60,7 +62,8 @@
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_verinfo2" />
+        app:srcCompat="@drawable/ic_verinfo2"
+        android:onClick="showDoctor"/>
 
     <TextView
         android:id="@+id/textView7"
