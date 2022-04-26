@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DbDoctors extends DbHelper{
 
@@ -104,5 +105,18 @@ public class DbDoctors extends DbHelper{
             }
         }
         return null;
+    }
+
+    public List<Doctors> showDoctors(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM t_doctors", null);
+        List<Doctors> doctors = new ArrayList<>();
+
+        if(cursor.moveToFirst()){
+            do{
+                doctors.add(new Doctors(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6), cursor.getInt(7)));
+            }while(cursor.moveToNext());
+        }
+        return doctors;
     }
 }

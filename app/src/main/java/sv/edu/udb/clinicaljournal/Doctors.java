@@ -14,7 +14,8 @@ public class Doctors {
     public Doctors() {
     }
 
-    public Doctors(String doctor_name, String doctor_lastname, String doctor_email, String doctor_pass, String doctor_phone, String doctor_descrip, int doctor_role) {
+    public Doctors(int id_doctor, String doctor_name, String doctor_lastname, String doctor_email, String doctor_pass, String doctor_phone, String doctor_descrip, int doctor_role) {
+        this.id_doctor = id_doctor;
         this.doctor_name = doctor_name;
         this.doctor_lastname = doctor_lastname;
         this.doctor_email = doctor_email;
