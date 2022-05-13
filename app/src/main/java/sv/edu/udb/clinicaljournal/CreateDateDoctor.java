@@ -85,19 +85,16 @@ public class CreateDateDoctor extends AppCompatActivity {
 
             }
         });
-        btnSaveDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DbAppointment dbAppointment=new DbAppointment(CreateDateDoctor.this);
-                long id=dbAppointment.insertAppointment(Integer.parseInt(txtDateIdPatient.getText().toString()) ,Integer.parseInt(txtDateIdDoctor.getText().toString()),txtDate.getText().toString(),
-                        spHour.getSelectedItem().toString(), txtDateDetail.getText().toString());
-                if(id>0){
-                    Log.d("Mensaje;","Cita registrada con exito");
-                    Toast.makeText(CreateDateDoctor.this,"CITA REGISTRADA CON EXITO", Toast.LENGTH_LONG).show();
-                }else{
-                    Log.d("Mensaje: ", "ERROR al crear cita");
-                    Toast.makeText(CreateDateDoctor.this, "ERROR AL CREAR CITA ", Toast.LENGTH_LONG).show();
-                }
+        btnSaveDate.setOnClickListener(view -> {
+            DbAppointment dbAppointment=new DbAppointment(CreateDateDoctor.this);
+            long id=dbAppointment.insertAppointment(Integer.parseInt(txtDateIdPatient.getText().toString()) ,Integer.parseInt(txtDateIdDoctor.getText().toString()),txtDate.getText().toString(),
+                    spHour.getSelectedItem().toString(), txtDateDetail.getText().toString());
+            if(id>0){
+                Log.d("Mensaje;","Cita registrada con exito");
+                Toast.makeText(CreateDateDoctor.this,"CITA REGISTRADA CON EXITO", Toast.LENGTH_LONG).show();
+            }else{
+                Log.d("Mensaje: ", "ERROR al crear cita");
+                Toast.makeText(CreateDateDoctor.this, "ERROR AL CREAR CITA ", Toast.LENGTH_LONG).show();
             }
         });
     }

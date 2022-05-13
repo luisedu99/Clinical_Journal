@@ -25,7 +25,7 @@ public class Appointment {
                 ", id_patientFK" +id_patientFK+ '\''+
                 ", id_doctor_FK" + id_doctorFK +'\''+
                 ", appointment_date" +appointment_date +'\''+
-                ", appointment_hout" +appointment_hour +'\''+
+                ", appointment_hour" +appointment_hour +'\''+
                 ", appointment_detail"+appointment_detail+
                 '}';
     }
