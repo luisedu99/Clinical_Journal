@@ -30,16 +30,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/textview_telefonoPaciente"
+                android:text="@string/textview_doctor"
                 android:textSize="20dp"
                 android:padding="3mm"/>
 
-            <EditText
-                android:id="@+id/editTextPhone"
+            <Spinner
+                android:id="@+id/spDoctor"
                 android:layout_width="match_parent"
                 android:layout_height="8mm"
-                android:ems="10"
-                android:inputType="phone" />
+                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,13 +46,11 @@
                 android:text="@string/textview_nombrePaciente"
                 android:textSize="20dp"
                 android:padding="3mm"/>
-            <TextView
-                android:id="@+id/edtPatientName"
+            <Spinner
+                android:id="@+id/spPatient"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="20dp"
-                android:padding="3mm"/>
+                android:layout_height="8mm"
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,7 +87,7 @@
                 android:padding="3mm"/>
 
             <EditText
-                android:id="@+id/editTextTextMultiLine"
+                android:id="@+id/edtDetailDate"
                 android:layout_width="55mm"
                 android:layout_height="12mm"
                 android:ems="10"
@@ -104,7 +101,19 @@
                 android:layout_height="8mm"
                 android:layout_gravity="center"
                 android:text="@string/boton_guardarCita"
+                android:onClick="createDate"
                 />
+
+            <TextView
+                android:id="@+id/txtIdDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+            <TextView
+                android:id="@+id/txtIdP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
         </LinearLayout>
 
 

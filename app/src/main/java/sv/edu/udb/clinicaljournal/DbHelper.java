@@ -45,8 +45,9 @@ public class DbHelper extends SQLiteOpenHelper {
                 "id_appointment INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "id_patientFK INTEGER NOT NULL," +
                 "id_doctorFK INTEGER NOT NULL," +
-                "clinic TEXT NOT NULL," +
                 "appointment_date TEXT NOT NULL," +
+                "appointment_hour TEXT NOT NULL,"+
+                "appointment_detail TEXT,"+
                 "FOREIGN KEY(id_patientFK) REFERENCES t_patients(id_patient)," +
                 "FOREIGN KEY(id_doctorFK) REFERENCES t_doctors(id_doctor))");
 

@@ -16,6 +16,7 @@ public class DoctorMenuScreen extends AppCompatActivity {
     Doctors docs;
     DbDoctors dbDoctors;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class DoctorMenuScreen extends AppCompatActivity {
         dbDoctors = new DbDoctors(this);
         docs = dbDoctors.getDoctorId(id_doc);
         txtDocName.setText(docs.getDoctor_name() + " " + docs.getDoctor_lastname());
+        int docId=docs.getId_doctor();
     }
     public void showPatients(View v){
         Intent intent=new Intent(this, ShowPatients.class);

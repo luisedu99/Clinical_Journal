@@ -29,16 +29,18 @@ public class PatientMenuScreen extends AppCompatActivity {
         pats = dbPatients.getPatientId(id_pat);
         txtvPatName.setText(pats.getPatient_name() + " " + pats.getPatient_lastname());
     }
-    public void createDatePatient(View view){
-        Intent intent = new Intent(this,CreateDatePatiente.class);
-        startActivity(intent);
-    }
+
     public void showDatePatient(View view){
         Intent intent = new Intent(this,ShowDatePatient.class);
         startActivity(intent);
     }
     public void showDoctor(View view){
         Intent intent = new Intent(this,ShowDoctor.class);
+        startActivity(intent);
+    }
+
+    public void createDateDoctor(View view) {
+        Intent intent = new Intent(this, CreateDateDoctor.class);
         startActivity(intent);
     }
 }

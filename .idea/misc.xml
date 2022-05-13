@@ -3,6 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/activity_createdatedoctor_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/activity_doctor_menu_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/activity_doctors_list_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/activity_listpatientes.xml" value="0.209375" />
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/activity_patient_menu_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/activity_register_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/activity_showdoctors_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/activity_showpatients_screen.xml" value="0.209375" />
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/item_showdoctors.xml" value="0.209375" />
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/item_showpatients.xml" value="0.209375" />
+        <entry key="..\:/JAVA/Clinica/Clinical_Journal/app/src/main/res/layout/list_item.xml" value="0.209375" />
         <entry key="..\:/Users/luchi/Documents/2022/Ciclo 1/DSM/TEO/Proyecto de catedra/app/src/main/res/layout/activity_doctor_menu_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/luchi/Documents/2022/Ciclo 1/DSM/TEO/Proyecto de catedra/app/src/main/res/layout/activity_doctors_list_screen.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/luchi/Documents/2022/Ciclo 1/DSM/TEO/Proyecto de catedra/app/src/main/res/layout/activity_login_screen.xml" value="0.36666666666666664" />
