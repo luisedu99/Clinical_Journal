@@ -4,9 +4,12 @@ import static sv.edu.udb.clinicaljournal.DbHelper.TABLE_APPOINTMENT;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
 
 public class DbAppointment extends DbHelper {
     Context context;
@@ -35,5 +38,19 @@ public class DbAppointment extends DbHelper {
             ex.toString();
         }
         return id;
+    }
+
+    public Cursor showAppointments(){
+        try{
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor rows = db.rawQuery("SELECT * FROM "+ TABLE_APPOINTMENT, null);
+            if(rows.moveToFirst()){
+                return rows;
+            } else {
+                return null;
+            }
+        } catch(Exception ex) {
+            return null;
+        }
     }
 }
